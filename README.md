@@ -6,7 +6,7 @@
 
 ## 🎞 Live Preview
 
-- ➡️[Projects](https://andrupirvulescu.github.io/PetAdoptRomania/login.html)
+- ➡️[Demo](https://andrupirvulescu.github.io/PetAdoptRomania/login.html)
 
 
 ## Developers TODOs
