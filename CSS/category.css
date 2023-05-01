@@ -1,0 +1,228 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+body {
+  background-color: #f3f3f1;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  margin-top: 5vh;
+}
+.dataTables_filter {
+  float: right;
+}
+.table-hover > tbody > tr:hover {
+  background-color: #ff9933;
+}
+.table {
+  @media only screen and (min-width: 768px) {
+    table-layout: fixed;
+    max-width: 100% !important;
+  }
+}
+thead {
+  background: #ddd;
+}
+.table td:nth-child(2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.highlight {
+  background: lighten(yellow, 30%);
+}
+
+@media only screen and (max-width: 767px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr,
+  tfoot tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50% !important;
+  }
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  .table td:nth-child(1) {
+    background: #ccc;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+  }
+  /*
+      Label the data
+      */
+  td:nth-of-type(1):before {
+    content: "Nume Stapan";
+  }
+  td:nth-of-type(2):before {
+    content: "Nume Animal";
+  }
+  td:nth-of-type(3):before {
+    content: "Judet";
+  }
+  td:nth-of-type(4):before {
+    content: "Varsta";
+  }
+  td:nth-of-type(5):before {
+    content: "Rasa";
+  }
+  td:nth-of-type(6):before {
+    content: "Culoare";
+  }
+  td:nth-of-type(7):before {
+    content: "Numar Tel";
+  }
+  .dataTables_length {
+    display: none;
+  }
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+footer p {
+  margin: 10px 0;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  margin-top: -40px;
+  width: 100%;
+  z-index: 3;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+}
+.header .a {
+  color: #000;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  color: #000;
+}
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+.header .menu-btn {
+  display: none;
+}
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/*768px*/
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}

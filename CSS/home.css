@@ -1,0 +1,324 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+body {
+  background-color: #f3f3f1;
+  font-family: "Roboto", sans-serif;
+}
+.cards {
+  width: 1320px;
+  position: relative;
+  margin: 80px auto;
+}
+.card {
+  width: 306px;
+  height: 320px;
+  float: left;
+  margin: 12px;
+  position: relative;
+}
+.card:focus {
+  z-index: 10;
+  border: none;
+  outline: none;
+}
+.card-inner {
+  overflow: hidden;
+  user-select: none;
+  background: #fff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 306px;
+  height: 320px;
+  transition: all 0.2s ease-out;
+  text-align: center;
+  font-family: "Segoe UI";
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.card-inner .category {
+  font-size: 13px;
+  font-weight: 600;
+  color: #585858;
+  margin-top: 18px;
+}
+.card-inner .icon {
+  position: absolute;
+  display: block;
+  width: 152px;
+  height: 152px;
+  left: 77px;
+  top: 52px;
+
+  transition: all 0.15s ease-out;
+  background-image: url("https://austchan.files.wordpress.com/2015/01/mzl-zppvzgfh.png");
+  background-size: 188px 188px;
+  background-position: center;
+}
+.card-inner .prompt {
+  position: absolute;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0 24px;
+  width: 306px;
+  box-sizing: border-box;
+  transition: all 0.1s ease;
+}
+.card-inner .prompt-1 {
+  left: 0;
+  top: 216px;
+}
+.card-inner .prompt-2 {
+  transition: opacity 0.15s ease, transform 0 0.5s;
+  left: 212px;
+  top: 84px;
+  opacity: 0;
+  text-align: left;
+  transform: translateX(0px);
+  transform: translateY(4px);
+}
+.card-inner .button {
+  height: 34px;
+  font-size: 13px;
+  border: 1px solid #ff9933;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #ff9933;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  width: 140px;
+}
+.card-inner .try {
+  display: none;
+}
+.card-inner .detail {
+  position: relative;
+  top: 172px;
+  text-align: left;
+  transform: translateY(4px);
+  font-size: 15px;
+  padding: 0 36px 36px 36px;
+  width: 504px;
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0 0.5s;
+}
+.card-inner .detail h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+.card-inner .detail p {
+  margin-top: 0.75em;
+}
+.card:hover .card-inner .button {
+  background-color: #ff9933;
+  color: white;
+}
+.card:focus .card-inner {
+  width: 540px;
+  margin-left: 234px/-2;
+  height: 696px;
+  transform: translateY(-36px);
+  border: none;
+  outline: none;
+  overflow: visible;
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.12);
+  border: 1px solid #555;
+  cursor: default;
+}
+.card:focus .card-inner .icon {
+  margin-left: -12px;
+}
+.card:focus .card-inner .prompt-1 {
+  opacity: 0;
+}
+.card:focus .card-inner .prompt-2 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.25s 0.2s ease-out, transform 0.25s 0.2s ease-out;
+}
+.card:focus .card-inner .detail {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.25s 0.2s ease-out, transform 0.25s 0.2s ease-out;
+}
+.card:focus .card-inner .try {
+  display: block;
+}
+.card:focus .card-inner .learn {
+  display: none;
+}
+.card:focus .card-inner .button {
+  background-color: #ff9933;
+  color: white;
+  cursor: pointer;
+  transform: translate(-50%, 0);
+}
+.card:focus .card-inner .button:hover {
+  color: white;
+  border-color: #cc6600;
+  background-color: #cc6600;
+}
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  margin-left: -8px;
+  margin-top: -80px;
+  width: 100%;
+  z-index: 3;
+  font-family: Helvetica, sans-serif;
+}
+.header .a {
+  color: #000;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  color: #000;
+}
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+.header .menu-btn {
+  display: none;
+}
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/*768px*/
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+footer p {
+  margin: 10px 0;
+}
+.card:nth-child(1) .icon {
+  background-image: url("/images/all.png");
+  background-size: 152px;
+}
+.card:nth-child(2) .icon {
+  background-image: url("/images/BRASOV.png");
+  background-size: 152px;
+}
+.card:nth-child(3) .icon {
+  background-image: url("/images/MURES.png");
+  background-size: 152px;
+}
+.card:nth-child(4) .icon {
+  background-image: url("/images/SIBIU.png");
+  background-size: 152px;
+}
+.card:nth-child(5) .icon {
+  background-image: url("/images/CLUJ.png");
+  background-size: 152px;
+}
+.card:nth-child(6) .icon {
+  background-image: url("/images/VALCEA.png");
+  background-size: 152px;
+}
+.card:nth-child(7) .icon {
+  background-image: url("/images/ALBA.PNG");
+  background-size: 152px;
+}
+.card:nth-child(8) .icon {
+  background-image: url("/images/HUNEDOARA.png");
+  background-size: 152px;
+}

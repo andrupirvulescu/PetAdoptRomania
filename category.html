@@ -1,0 +1,188 @@
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link rel="stylesheet" href="/CSS/category.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+<script src='/JS/category.js' defer></script>
+<script src='//code.jquery.com/jquery-1.12.3.js'></script>
+<script src='https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'></script>
+<script src='https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js'></script>
+<script src='https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js'></script>
+
+<header class="header">
+    <a href="home.html" style="color: purple;" class="logo">PetAdopt Romania</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="home.html">Acasa</a></li>
+      <li><a href="about.html">Despre Noi</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a id="logout" href="login.html">Logout</a></li>
+    </ul>
+  </header>
+<div class="container wrapper">
+    <br/><br/>
+    <input type="text" id="myInput" style="display: none;" onkeyup="filter_judet()"  placeholder="Judet" title="">
+    <table class="table table-bordered table-hover" id="category_table"  cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th class="col-md-2">Nume Stapan</th>
+                <th class="col-md-2">Nume Animal</th>
+                <th class="col-md-2">Judet</th>
+                <th class="col-md-2">Varsta</th>
+                <th class="col-md-2">Rasa</th>
+                <th class="col-md-2">Culoare</th>
+                <th class="col-md-2">Numar Tel</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Nume Stapan</th>
+                <th>Nume Animal</th>
+                <th>Judet</th>
+                <th>Varsta</th>
+                <th>Rasa</th>
+                <th>Culoare</th>
+                <th>Numar Tel</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Mihai Gabriel</td>
+                <td>Pufy</td>
+                <td>Sibiu</td>
+                <td>6</td>
+                <td>Bichon</td>
+                <td>Alb</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Mihai Ioan</td>
+                <td>Doris</td>
+                <td>Brasov</td>
+                <td>1</td>
+                <td>Frenchy</td>
+                <td>Maro</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Andreea Maria</td>
+                <td>Tobi</td>
+                <td>Mures</td>
+                <td>3</td>
+                <td>Birmaneza</td>
+                <td>Gri</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Alexandru Constantin</td>
+                <td>Juno</td>
+                <td>Valcea</td>
+                <td>1</td>
+                <td>Pug</td>
+                <td>Maro</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Cristi Ivan</td>
+                <td>Pablo</td>
+                <td>Cluj</td>
+                <td>1</td>
+                <td>British</td>
+                <td>Maro</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Bianca Mihaela</td>
+                <td>Micky</td>
+                <td>Hunedoara</td>
+                <td>4</td>
+                <td>Doberman</td>
+                <td>Negru</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Vlad Mihai</td>
+                <td>Timoty</td>
+                <td>Alba</td>
+                <td>5</td>
+                <td>Scottish</td>
+                <td>Gri</td>
+                <td>0744123456</td>
+            </tr> 
+            <tr>
+                <td>Robert Ionut</td>
+                <td>Coca</td>
+                <td>Sibiu</td>
+                <td>2</td>
+                <td>Husky</td>
+                <td>Alb</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Mircea Ioan</td>
+                <td>Thunder</td>
+                <td>Brasov</td>
+                <td>2</td>
+                <td>Pitbull</td>
+                <td>Negru</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Clara Ioana</td>
+                <td>Lucky</td>
+                <td>Mures</td>
+                <td>4</td>
+                <td>Cane Corso</td>
+                <td>Negru</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Alex Popescu</td>
+                <td>Cookie</td>
+                <td>Valcea</td>
+                <td>2</td>
+                <td>Mops</td>
+                <td>Maro</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Sergiu Dumitru</td>
+                <td>Paco</td>
+                <td>Cluj</td>
+                <td>5</td>
+                <td>Norvegiana</td>
+                <td>Negru</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Cristina Mihaela</td>
+                <td>Kent</td>
+                <td>Hunedoara</td>
+                <td>4</td>
+                <td>Labrador</td>
+                <td>Maro</td>
+                <td>0744123456</td>
+            </tr>
+            <tr>
+                <td>Matei Cristian</td>
+                <td>Oscar</td>
+                <td>Alba</td>
+                <td>8</td>
+                <td>Corgi</td>
+                <td>Negru</td>
+                <td>0744123456</td>
+            </tr>   
+        </tbody>
+    </table>
+  </div>
+  <footer>
+	<p>
+		Created with <i class="fa fa-heart"></i> by
+		Andrei Pirvulescu</a>
+	</p>
+</footer>
