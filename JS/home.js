@@ -8,6 +8,14 @@ if (user == null && pass == null) {
   window.location.href = "https://andrupirvulescu.github.io/PetAdoptRomania/login.html";
 }
 
+var logout = document.getElementById("logout");
+logout.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  sessionStorage.clear();
+  window.location.href = "https://andrupirvulescu.github.io/PetAdoptRomania/login.html";
+});
+
 var all = document.getElementById("button");
 all.addEventListener("click", function (event) {
   event.preventDefault();
