@@ -5,7 +5,7 @@ var welcome = document.getElementById("welcome");
 welcome.innerHTML = "Welcome " + user;
 
 if (user == null && pass == null) {
-  window.location.href = "login.html";
+  window.location.href = "https://andrupirvulescu.github.io/PetAdoptRomania/login.html";
 }
 
 var all = document.getElementById("button");
