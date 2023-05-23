@@ -10,5 +10,5 @@ submit.addEventListener("click", function (event) {
       email +
       ". O zi frumoasa!"
   );
-  window.location.href = "login.html";
+  window.location.href = "https://andrupirvulescu.github.io/PetAdoptRomania/login.html";
 });
