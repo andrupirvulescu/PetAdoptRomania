@@ -4,8 +4,7 @@ var pass = sessionStorage.getItem("pass");
 if (user == null && pass == null) {
   window.location.href = "login.html";
 }
-//var welcome = document.getElementById("welcome");
-//welcome.innerHTML = "Welcome " + user;
+
 var all = document.getElementById("button");
 all.addEventListener("click", function (event) {
   event.preventDefault();
