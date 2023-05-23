@@ -60,3 +60,11 @@ all.addEventListener("click", function (event) {
   sessionStorage.setItem("filter", "mures");
   window.location.href = "category.html";
 });
+
+var submit = document.getElementById("logout");
+submit.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  sessionStorage.clear();
+  window.location.href = "login.html";
+});
