@@ -291,34 +291,34 @@ footer p {
   margin: 10px 0;
 }
 .card:nth-child(1) .icon {
-  background-image: url("/images/all.png");
+  background-image: url("https://andrupirvulescu.github.io/PetAdoptRomania/images/all.png");
   background-size: 152px;
 }
 .card:nth-child(2) .icon {
-  background-image: url("/images/BRASOV.png");
+  background-image: url("https://andrupirvulescu.github.io/PetAdoptRomania/images/BRASOV.png");
   background-size: 152px;
 }
 .card:nth-child(3) .icon {
-  background-image: url("/images/MURES.png");
+  background-image: url("https://andrupirvulescu.github.io/PetAdoptRomania/images/MURES.png");
   background-size: 152px;
 }
 .card:nth-child(4) .icon {
-  background-image: url("/images/SIBIU.png");
+  background-image: url("https://andrupirvulescu.github.io/PetAdoptRomania/images/SIBIU.png");
   background-size: 152px;
 }
 .card:nth-child(5) .icon {
-  background-image: url("/images/CLUJ.png");
+  background-image: url("https://andrupirvulescu.github.io/PetAdoptRomania/images/CLUJ.png");
   background-size: 152px;
 }
 .card:nth-child(6) .icon {
-  background-image: url("/images/VALCEA.png");
+  background-image: url("https://andrupirvulescu.github.io/PetAdoptRomania/images/VALCEA.png");
   background-size: 152px;
 }
 .card:nth-child(7) .icon {
-  background-image: url("/images/ALBA.PNG");
+  background-image: url("https://andrupirvulescu.github.io/PetAdoptRomania/images/ALBA.PNG");
   background-size: 152px;
 }
 .card:nth-child(8) .icon {
-  background-image: url("/images/HUNEDOARA.png");
+  background-image: url("https://andrupirvulescu.github.io/PetAdoptRomania/images/HUNEDOARA.png");
   background-size: 152px;
 }
