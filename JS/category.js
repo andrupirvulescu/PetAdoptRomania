@@ -29,5 +29,5 @@ submit.addEventListener("click", function (event) {
   event.preventDefault();
 
   sessionStorage.clear();
-  window.location.href = "login.html";
+  window.location.href = "https://andrupirvulescu.github.io/PetAdoptRomania/login.html";
 });
