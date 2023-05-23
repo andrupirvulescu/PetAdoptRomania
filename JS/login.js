@@ -15,5 +15,5 @@ submit.addEventListener("click", function (event) {
   var pass = document.getElementById("password").value;
   sessionStorage.setItem("user", user);
   sessionStorage.setItem("pass", pass);
-  window.location.href = "home.html";
+  window.location.href = "https://andrupirvulescu.github.io/PetAdoptRomania/home.html";
 });
