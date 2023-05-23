@@ -1,10 +1,6 @@
 var user = sessionStorage.getItem("user");
 var pass = sessionStorage.getItem("pass");
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 26362de366252dca07ca6a8e8f4e339c55d112b2
 if (user == null && pass == null) {
   window.location.href = "https://andrupirvulescu.github.io/PetAdoptRomania/login.html";
 }
